@@ -1,13 +1,12 @@
 {
   "name": "github-actions-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "export": "output: export"
+    "lint": "next lint"
   },
   "dependencies": {
     "react": "^18",
