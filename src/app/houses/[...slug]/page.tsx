@@ -18,7 +18,7 @@ export default async function page({params}: any) {
     <p>{house.publishedAt}</p>
     <p>{house.excerpt}</p>
     <div dangerouslySetInnerHTML={{ __html: house.content }} />
-    <Image src={house.cover_image} alt="" />
+    {/* <Image src={house.cover_image} alt="" /> */}
   </div>
   )
 }
