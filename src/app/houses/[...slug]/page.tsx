@@ -2,7 +2,6 @@ import { getAllArticles, getArticleFromSlug } from '@/utils/mdx'
 import React from 'react'
 import Image from 'next/image'
 export async function generateStaticParams() {
-  'use server';
   const houses = (await getAllArticles() as any).map((house: any) => ({
     ...house,
     slug: [house.slug]
