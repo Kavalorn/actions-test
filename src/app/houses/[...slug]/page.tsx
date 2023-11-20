@@ -1,5 +1,6 @@
 import { getAllArticles, getArticleFromSlug } from '@/utils/mdx'
 import React from 'react'
+import Image from 'next/image'
 export async function generateStaticParams() {
   'use server';
   const houses = (await getAllArticles() as any).map((house: any) => ({
@@ -17,7 +18,7 @@ export default async function page({params}: any) {
     <p>{house.publishedAt}</p>
     <p>{house.excerpt}</p>
     <div dangerouslySetInnerHTML={{ __html: house.content }} />
-    <img src={house.cover_image} alt="" />
+    <Image src={house.cover_image} alt="" />
   </div>
   )
 }
