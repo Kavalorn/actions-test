@@ -1,13 +1,14 @@
+import { getAllHouses } from '@/utils/mdx'
+import React from 'react'
 import Image from 'next/image'
-import { getAllHouses } from '../../src/utils/mdx'
 import Link from 'next/link'
 
-export default async function Home() {
-  const houses: any = await getAllHouses()
+async function page() {
+    const houses = await getAllHouses() as any;
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-          {houses.map((article: any) => {
+    <div>
+        <h1>HOUSES</h1>
+        {houses.map((article: any) => {
             return (
               <div key={article.slug} className="p-4">
                 <h1>{article.title}</h1>
@@ -21,7 +22,8 @@ export default async function Home() {
               </div>
             )
           })}
-      </div>
-    </main>
+    </div>
   )
 }
+
+export default page

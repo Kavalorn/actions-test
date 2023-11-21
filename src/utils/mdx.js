@@ -34,7 +34,7 @@ export async function getArticleFromSlug(slug) {
     }
   }
 
-  export async function getAllArticles() {
+  export async function getAllHouses() {
     const articles = fs.readdirSync(path.join(process.cwd(), 'src/data/articles'))
   
     return articles.reduce((allArticles, articleSlug) => {
