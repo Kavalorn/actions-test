@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/image-url": "^1.0.2",
+    "@stripe/stripe-js": "^2.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "dayjs": "^1.11.10",
@@ -17,12 +19,15 @@
     "lucide-react": "^0.294.0",
     "next": "14.0.3",
     "next-mdx-remote": "^4.4.1",
+    "next-sanity": "^7.0.1",
     "react": "^18",
     "react-dom": "^18",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "stripe": "^14.7.0",
     "tailwind-merge": "^2.1.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "use-shopping-cart": "^3.1.8"
   },
   "devDependencies": {
     "@types/node": "^20",
