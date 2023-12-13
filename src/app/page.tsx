@@ -1,12 +1,16 @@
 import Image from 'next/image'
 import { getAllHouses } from '../../src/utils/mdx'
 import Link from 'next/link'
+import Hero from '@/components/Hero'
+import Newest from '@/components/Newest'
 
 export default async function Home() {
   const houses: any = await getAllHouses()
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+        <Hero />
+        <Newest />
           {houses.map((article: any) => {
             return (
               <div key={article.slug} className="p-4">
